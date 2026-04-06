@@ -14,8 +14,8 @@ interface SelectorSectionProps {
 export default function SelectorSection({ title, items, selected, onSelect }: SelectorSectionProps) {
   return (
     <div className="mb-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">{title}</h2>
-      <div className="grid grid-cols-2 gap-3">
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{title}</h2>
+      <div className="grid grid-cols-2 gap-3 sm:gap-4">
         {items.map((item) => (
           <FurnitureCard
             key={item.id}

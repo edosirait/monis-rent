@@ -30,25 +30,25 @@ export default function WorkspacePage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="px-6 py-4">
+        <div className="px-4 py-4 sm:px-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-200 font-medium mb-4"
+            className="inline-flex items-center gap-2 px-3 py-2 text-sm sm:text-base text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-200 font-medium mb-3"
           >
             ← Kembali ke Awal
           </Link>
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-1">🎉 Design Your Workspace</h1>
-            <p className="text-gray-600">Pick a desk, choose a chair, add your accessories, and rent your perfect setup</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">Design Your Workspace</h1>
+            <p className="text-sm sm:text-base text-gray-600">Pick a desk, choose a chair, add your accessories, and rent your perfect setup</p>
           </div>
         </div>
       </div>
 
-      {/* Main layout - Flex container */}
-      <div className="flex flex-1">
-        {/* Left Sidebar - Selection Panel (Full Height) */}
-        <div className="w-80 bg-white border-r border-gray-200 overflow-y-auto">
-          <div className="p-6 space-y-6">
+      {/* Main layout */}
+      <div className="flex-1 min-h-0 flex flex-col lg:flex-row">
+        {/* Left Sidebar - Selection Panel */}
+        <div className="w-full lg:w-96 bg-white border-b lg:border-b-0 lg:border-r border-gray-200 lg:h-[calc(100vh-133px)] lg:overflow-y-auto">
+          <div className="p-4 sm:p-6 space-y-6">
             {/* Desks */}
             <SelectorSection
               title="Select a Desk"
@@ -76,9 +76,9 @@ export default function WorkspacePage() {
 
         </div>
 
-        {/* Right Side - Canvas Preview (Full Height) */}
-        <div className="flex-1 bg-gray-50 overflow-y-auto">
-          <div className="p-8">
+        {/* Right Side - Preview + Checkout */}
+        <div className="flex-1 min-h-0 bg-gray-50 lg:h-[calc(100vh-133px)] lg:overflow-y-auto">
+          <div className="p-4 sm:p-6 lg:p-8">
             <WorkspacePreview
               desk={setup.desk}
               chair={setup.chair}
@@ -86,11 +86,11 @@ export default function WorkspacePage() {
             />
           </div>
 
-          {/* Bottom Section - Checkout Summary (Full Width) */}
-          <div className="bg-white border-t border-gray-200 px-6 py-6">
-            <div className="flex gap-6">
+          {/* Checkout Summary */}
+          <div className="bg-white border-t border-gray-200 px-4 py-4 sm:px-6 sm:py-6">
+            <div className="flex flex-col lg:flex-row gap-6">
               {/* Left spacer to align with sidebar */}
-              <div className="w-80 flex-shrink-0"></div>
+              <div className="hidden lg:block lg:w-96 lg:flex-shrink-0"></div>
 
               {/* Checkout summary content */}
               <div className="flex-1">
