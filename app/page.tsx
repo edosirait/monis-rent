@@ -100,7 +100,7 @@ export default function Home() {
       {/* Footer */}
       <div className="bg-gray-900 text-white py-10 sm:py-12 mt-14 sm:mt-16 lg:mt-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-400 mb-4">© 2026 Monis Rent - Workspace Solutions</p>
+          <p className="text-gray-400 mb-4">© 2026 Monis Rent - Workspace Alfredo Solutions</p>
           <p className="text-sm text-gray-500">Free shipping | 30-day returns | 1-year warranty</p>
         </div>
       </div>
